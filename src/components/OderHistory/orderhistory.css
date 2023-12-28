@@ -1,0 +1,54 @@
+.oderss {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid rgb(2, 173, 2); */
+  background-color: #161616;
+  margin-top: 5.7%;
+  padding-bottom: 2rem;
+}
+
+.oderHis-div {
+  border: 1px solid rgb(2, 173, 2);
+}
+
+.oderHis-addcart-btn {
+  width: 89%;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 13px;
+  color: white;
+  background-color: rgb(2, 173, 2);
+  border: 1px solid green;
+  cursor: pointer;
+  margin-left: 2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+
+
+@media (max-width:500px) {
+
+  .oderss {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    background-color: #161616;
+    margin-top: 17%;
+  }
+
+  .oderHis-addcart-btn {
+    width: 70%;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 13px;
+    color: white;
+    background-color: rgb(2, 173, 2);
+    border: 1px solid green;
+    cursor: pointer;
+    margin-left: 3rem;
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+}
