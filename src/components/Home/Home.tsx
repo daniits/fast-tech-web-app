@@ -2,11 +2,11 @@ import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import "../Home/home.css";
 import Navbar from '../NavBar/Navbar';
-import { restaurantData } from '@/mocks/common';
+import { restaurantData } from '../../mocks/common';
 import ProductSlider from '../ProductSlider/ProductSlider';
 import Footer from '../Footer/Footer';
-import { getAllProducts } from '@/network/products/products';
-import { useConfig } from '@/network/Common/common';
+import { getAllProducts } from '../../network/products/products';
+import { useConfig } from '../../network/Common/common';
 import { toast, ToastContainer } from 'react-toastify';
 
 const Home = () => {
