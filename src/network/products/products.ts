@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query'
-import { fetchData } from '@/network/api'
+import { fetchData } from '../../network/api'
 
 const endpoints = {
   recommendedSides: '/products/get_recomended_sides',

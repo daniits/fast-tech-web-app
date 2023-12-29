@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Singup from '../../pages/SignUp/SignUp'
 import './navbar.css'
-import { useSignIn } from '@/network/auth/auth'
-import { useForgetPassword, useVerifyToken, useResetPassword } from '@/network/verify/verify'
-import { useAuth } from '@/hooks/AuthContext'
+import { useSignIn } from '../../network/auth/auth'
+import { useForgetPassword, useVerifyToken, useResetPassword } from '../../network/verify/verify'
+import { useAuth } from '../../hooks/AuthContext'
 import { Link, useHistory } from 'react-router-dom';
-import { restaurantData } from '@/mocks/common'
+import { restaurantData } from '../../mocks/common'
 import Restpassword from '../Rest Password/Restpassword'
 import { CgProfile } from "react-icons/cg";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
-import navlogo from "./nav-logo.png"
+import navlogo from "./navLogo.png"
 import { toast } from 'react-toastify'
 import InputMask from 'react-input-mask';
 import { useForm } from "react-hook-form";
@@ -24,8 +24,8 @@ import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/
 const Navbar = ({ localSomething }: any) => {
   const [token, setToken] = useState('');
   let Links = [
-    { name: "Home", link: "/home" },
-    { name: "Menu", link: "/" },
+    { name: "Home", link: "/" },
+    { name: "Menu", link: "/menu" },
 
   ];
 

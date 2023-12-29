@@ -118,7 +118,6 @@ const Menu = () => {
             <div className="h-line p-1 h-[30px] overflow-hidden">
               <div className="container">
                 <div className="row">
-
                   <h1 className='h-line-h1 px-2 sm:text-[13px]' onClick={() => scrollToProducts(-1)}>
                     Join {restaurantData.name} Rewards to get free items when you order here →
                   </h1>

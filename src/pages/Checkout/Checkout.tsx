@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { Link, useHistory } from 'react-router-dom';
 import { IoMdAddCircleOutline } from "react-icons/io";
-import { usePopularProducts } from '@/network/products/products'
-import { useAddAddress, useGetAddress, useGetPaymentCard, useConfig } from '@/network/Common/common'
-import { restaurantData } from '@/mocks/common';
+import { usePopularProducts } from '../../network/products/products'
+import { useAddAddress, useGetAddress, useGetPaymentCard, useConfig } from '../../network/Common/common'
+import { restaurantData } from '../../mocks/common';
 import { IoHomeOutline } from "react-icons/io5";
 import { CiCreditCard1 } from "react-icons/ci";
 import { toast, ToastContainer } from 'react-toastify';
 import '../Cart/Cart'
 import './checkout.css'
 import axios from 'axios';
-import { usePlaceOrder } from '@/network/order/order';
-import Navbar from '@/components/NavBar/Navbar';
-import Footer from '@/components/Footer/Footer';
+import { usePlaceOrder } from '../../network/order/order';
+import Navbar from '../../components/NavBar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 export default function Checkout() {
   let [count, setCount] = useState(0);

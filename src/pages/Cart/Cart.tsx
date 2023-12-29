@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { Link, useHistory } from 'react-router-dom';
 import { IoMdAddCircleOutline } from "react-icons/io";
-import { usePopularProducts } from '@/network/products/products'
-import { restaurantData } from '@/mocks/common';
+import { usePopularProducts } from '../../network/products/products'
+import { restaurantData } from '../../mocks/common';
 import './cart.css'
-import { useConfig } from '@/network/Common/common';
-import Navbar from '@/components/NavBar/Navbar';
-import Footer from '@/components/Footer/Footer';
+import { useConfig } from '../../network/Common/common';
+import Navbar from '../../components/NavBar/Navbar';
+import Footer from '../../components/Footer/Footer';
 export default function Cart() {
   let [count, setCount] = useState(0);
   let [itemsCount, setItemsCount] = useState(0);

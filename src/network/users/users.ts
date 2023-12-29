@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query'
-import { fetchData } from '@/network/api'
+import { fetchData } from '../../network/api'
 
 const endpoints = {
   search: '/user/search'

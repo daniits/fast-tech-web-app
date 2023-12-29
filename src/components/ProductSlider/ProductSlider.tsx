@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FaAngleLeft, FaChevronRight } from 'react-icons/fa6';
 import 'react-toastify/dist/ReactToastify.css';
-import { getAllPopularProducts } from '@/network/products/products';
-import { restaurantData } from '@/mocks/common';
-import { useConfig } from '@/network/Common/common';
+import { getAllPopularProducts } from '../../network/products/products';
+import { restaurantData } from '../../mocks/common';
+import { useConfig } from '../../network/Common/common';
 import { useHistory } from 'react-router-dom';
 
 const ProductSlider = ({ addProductToCart }: any) => {

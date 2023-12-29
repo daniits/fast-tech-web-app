@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { Link, useHistory } from 'react-router-dom';
 import { IoMdAddCircleOutline } from "react-icons/io";
-import { useGetFavouriteProduct } from '@/network/Common/common'
-import { restaurantData } from '@/mocks/common';
+import { useGetFavouriteProduct } from '../../network/Common/common'
+import { restaurantData } from '../../mocks/common';
 import '../Cart/cart.css'
-import { useConfig } from '@/network/Common/common';
+import { useConfig } from '../../network/Common/common';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import Product from '../Product/Product';
-import Navbar from '@/components/NavBar/Navbar';
-import Footer from '@/components/Footer/Footer';
+import Navbar from '../../components/NavBar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 export default function WishList() {
 
