@@ -24,7 +24,7 @@ import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/
 const Navbar = ({ localSomething }: any) => {
   const [token, setToken] = useState('');
   let Links = [
-    { name: "Home", link: "/home" },
+    { name: "Home", link: "/" },
     { name: "Menu", link: "/menu" },
 
   ];
