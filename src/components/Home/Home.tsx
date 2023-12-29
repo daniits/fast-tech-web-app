@@ -1,16 +1,16 @@
 import React from 'react';
 import "../Home/home.css";
 import Navbar from '../NavBar/Navbar';
-import Footer from '../Footer/Footer';
 import BG1 from "./homeBackground.png"
 import { toast, ToastContainer } from 'react-toastify';
 import { Button, Img, Input, Line, Text } from "../../fonts";
+import Footer from '../Common/Footer/Footer';
 const Home = () => {
 
   return (
     <>
       <ToastContainer />
-      <div className='flex flex-column'>
+      <div className='flex flex-column' style={{ background: "#000000" }}>
         <div >
           <Navbar />
         </div>
@@ -25,7 +25,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-end justify-start pb-[2418px] w-full">
+            <div className="flex flex-col items-end justify-start w-full">
               <div className="md:h-[956px] sm:h-[958px] h-[960px] md:px-5 relative w-full">
                 <div className="absolute h-[956px] inset-[0] justify-center m-auto w-full">
                   <Img
@@ -93,31 +93,26 @@ const Home = () => {
                   />
                 </div>
               </div>
-              <div className="bg-gray-900_01 flex flex-col items-center justify-start p-[99px] md:px-10 sm:px-5 w-full">
+              <div className="bg-gray-900_01 flex flex-col items-center justify-start md:px-10 sm:px-5 w-full">
                 <Text
-                  className="leading-[80.00px] mb-[559px] md:text-5xl text-7xl text-center text-white-A700 w-[79%] sm:w-full"
+                  className="leading-[80.00px]  md:text-5xl text-7xl text-center text-white-A700 w-[65%] sm:w-full"
                   size="txtManropeBold72"
+                  style={{ color: "white" }}
                 >
                   Florida, Atlanta, Washington D.C, New York, North Carolina, and
                   growing!
                 </Text>
               </div>
-              <div className="md:h-[134px] h-[708px] pb-[574px] md:px-5 relative w-full">
+              <div className="md:h-[708px] h-[708px] pb-[106px] md:px-5 relative w-full" style={{ opacity: "0.42", background: "#161616" }}>
                 <Img
-                  className="h-[134px] mx-auto object-cover w-full"
+                  className="h-[708px] mx-auto object-contain w-full"
                   src="images/img_2a8f8afe48bc4.png"
                   alt="2a8f8afe48bcFour"
                 />
                 <div className="absolute bg-gray-900_80 h-[134px] inset-x-[0] mx-auto top-[0] w-full"></div>
               </div>
-              <div className="sm:h-[1195px] md:h-[1433px] h-[632px] mt-[563px] md:px-5 relative w-[84%] md:w-full">
-                <Text
-                  className="ml-auto mr-[170px] mt-[83px] md:text-5xl text-7xl text-center text-white-A700"
-                  size="txtManropeBold72"
-                >
-                  <>Less Talkin&#39; More Tacos!</>
-                </Text>
-                <div className="absolute flex md:flex-col flex-row md:gap-10 gap-[79px] h-full inset-[0] items-start justify-center m-auto md:pr-10 pr-12 sm:pr-5 py-12 w-full">
+              <div className="sm:h-[1195px] md:h-[1433px] h-[632px] md:px-5 relative w-[84%] md:w-full">
+                <div className="flex md:flex-col flex-row md:gap-10 gap-[79px] h-full inset-[0] items-start justify-center m-auto md:pr-10 pr-12 sm:pr-5 py-12 w-full">
                   <div className="bg-gray-900_01 flex md:flex-1 flex-col items-center justify-start mb-4 pl-[7px] rounded-lg w-[35%] md:w-full">
                     <Img
                       className="h-[520px] sm:h-auto object-cover w-[521px] md:w-full"
@@ -125,18 +120,26 @@ const Home = () => {
                       alt="h18v9lanjaywqsg"
                     />
                   </div>
-                  <Text
-                    className="sm:flex-1 leading-[33.00px] md:mt-0 mt-[148px] text-2xl md:text-[22px] text-white-A700 sm:text-xl w-1/2 sm:w-full"
-                    size="txtManropeRegular24"
-                  >
-                    Starting your own restaurant from scratch is quite a
-                    challenging feat and the restaurant industry has one of the
-                    highest failure rates for doing so. With a Talkin’ Tacos
-                    franchise we have already laid the groundwork, have best of
-                    class technology and systems in place, a proven concept and
-                    track record of success, and all the support you will need
-                    from our team with many years of experience in the industry.
-                  </Text>
+                  <div>
+                    <Text
+                      className="ml-auto mr-[170px] mt-[83px] md:text-5xl text-7xl text-center text-white-A700"
+                      size="txtManropeBold72"
+                    >
+                      <>Less Talkin&#39; More Tacos!</>
+                    </Text>
+                    <Text
+                      className="sm:flex-1 leading-[33.00px] md:mt-0 mt-[148px] text-2xl md:text-[22px] text-white-A700 sm:text-xl w-1/2 sm:w-full"
+                      size="txtManropeRegular24"
+                    >
+                      Starting your own restaurant from scratch is quite a
+                      challenging feat and the restaurant industry has one of the
+                      highest failure rates for doing so. With a Talkin’ Tacos
+                      franchise we have already laid the groundwork, have best of
+                      class technology and systems in place, a proven concept and
+                      track record of success, and all the support you will need
+                      from our team with many years of experience in the industry.
+                    </Text>
+                  </div>
                 </div>
               </div>
               <div className="md:h-[630px] h-[632px] md:px-5 relative w-3/4 md:w-full">
@@ -1180,210 +1183,6 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center justify-start max-w-[1629px] mx-auto md:px-5 w-full">
-                <div className="flex flex-col gap-8 items-start justify-start w-full">
-                  <Img
-                    className="h-[60px]"
-                    src="images/img_divflex.svg"
-                    alt="divflex_Two"
-                  />
-                  <Line className="bg-gray-700 h-px w-full" />
-                  <div className="flex md:flex-col flex-row gap-[23px] items-start justify-between w-[97%] md:w-full">
-                    <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between pb-[178px] w-[83%] md:w-full">
-                      <div className="md:h-[173px] h-[222px] relative w-[34%] md:w-full">
-                        <div className="absolute flex flex-col items-start justify-start left-[0] pb-[22px] top-[0] w-[87%]">
-                          <div className="flex flex-col items-start justify-start">
-                            <Text
-                              className="text-lg text-white-A700"
-                              size="txtManropeBold18"
-                            >
-                              Social
-                            </Text>
-                          </div>
-                          <div className="flex flex-row gap-2 items-center justify-start mt-[23px] md:pr-10 sm:pr-5 pr-[124px] w-[49%] md:w-full">
-                            <Img
-                              className="h-6 w-6"
-                              src="images/img_facebook.svg"
-                              alt="facebook"
-                            />
-                            <Img
-                              className="h-6 w-6"
-                              src="images/img_linkviewinstagram.svg"
-                              alt="linkviewinstagr"
-                            />
-                          </div>
-                          <Text
-                            className="mt-3.5 text-white-A700 text-xl"
-                            size="txtManropeBold20"
-                          >
-                            Newsletter
-                          </Text>
-                          <Text
-                            className="mt-4 text-base text-white-A700"
-                            size="txtManropeMedium16"
-                          >
-                            Subscribe to our news letter to get latest updates
-                          </Text>
-                        </div>
-                        <div className="absolute bg-blue_gray-100 bottom-[0] flex flex-row inset-x-[0] items-center justify-between mx-auto p-[9px] rounded-lg w-full">
-                          <Text
-                            className="ml-3 text-base text-gray-600"
-                            size="txtManropeMedium16Gray600"
-                          >
-                            Your Email address
-                          </Text>
-                          <Button
-                            className="cursor-pointer font-semibold min-w-[129px] text-base text-center"
-                            shape="round"
-                            color="green_A700"
-                            size="xs"
-                            variant="fill"
-                          >
-                            Subscribe
-                          </Button>
-                        </div>
-                      </div>
-                      <div className="flex flex-col relative w-1/5 md:w-full">
-                        <div className="flex flex-col gap-[15px] items-center justify-start mx-auto pb-4 w-full">
-                          <div className="flex flex-col items-start justify-start pr-0.5 pt-0.5 w-full">
-                            <Text
-                              className="text-lg text-white-A700"
-                              size="txtManropeBold18"
-                            >
-                              My Account
-                            </Text>
-                          </div>
-                          <div className="flex flex-col gap-2 items-center justify-start w-full">
-                            <div className="flex flex-col items-start justify-start w-full">
-                              <Text
-                                className="text-base text-gray-300"
-                                size="txtManropeBold16Gray300"
-                              >
-                                Profile
-                              </Text>
-                            </div>
-                            <div className="flex flex-col items-start justify-start w-full">
-                              <Text
-                                className="text-base text-gray-300"
-                                size="txtManropeBold16Gray300"
-                              >
-                                Address
-                              </Text>
-                            </div>
-                            <div className="flex flex-col items-start justify-start w-full">
-                              <Text
-                                className="mt-0.5 text-base text-gray-300"
-                                size="txtManropeBold16Gray300"
-                              >
-                                Coupons
-                              </Text>
-                            </div>
-                            <div className="flex flex-col items-start justify-start w-full">
-                              <Text
-                                className="text-base text-gray-300"
-                                size="txtManropeBold16Gray300"
-                              >
-                                Wallet
-                              </Text>
-                            </div>
-                          </div>
-                        </div>
-                        <Text
-                          className="mt-[-10.76px] text-base text-gray-300 z-[1]"
-                          size="txtManropeBold16Gray300"
-                        >
-                          Orders
-                        </Text>
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-[15px] items-center justify-start pb-4 w-[16%] md:w-full">
-                      <div className="flex flex-col items-start justify-start w-full">
-                        <Text
-                          className="text-lg text-white-A700"
-                          size="txtManropeBold18"
-                        >
-                          Quick Links
-                        </Text>
-                      </div>
-                      <div className="flex flex-col gap-2 items-center justify-start w-full">
-                        <div className="flex flex-col items-start justify-start w-full">
-                          <a
-                            href="javascript:"
-                            className="text-base text-gray-300"
-                          >
-                            <Text size="txtManropeBold16Gray300">Contact Us</Text>
-                          </a>
-                        </div>
-                        <div className="flex flex-col items-start justify-start w-full">
-                          <a
-                            href="javascript:"
-                            className="mt-0.5 text-base text-gray-300"
-                          >
-                            <Text size="txtManropeBold16Gray300">
-                              Privacy Policy
-                            </Text>
-                          </a>
-                        </div>
-                        <div className="flex flex-col items-start justify-start w-full">
-                          <a
-                            href="javascript:"
-                            className="text-base text-gray-300"
-                          >
-                            <Text size="txtManropeBold16Gray300">
-                              Terms and Conditions
-                            </Text>
-                          </a>
-                        </div>
-                        <div className="flex flex-col items-start justify-start w-full">
-                          <Text
-                            className="text-base text-gray-300"
-                            size="txtManropeBold16Gray300"
-                          >
-                            About Us
-                          </Text>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <Line className="bg-gray-700 h-px w-full" />
-                  <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between w-full">
-                    <div className="flex flex-col items-start justify-start">
-                      <div className="flex sm:flex-col flex-row sm:gap-5 items-center justify-start w-[33%] md:w-full">
-                        <div className="flex flex-col items-center justify-start">
-                          <Text
-                            className="text-base text-gray-300"
-                            size="txtManropeRegular16"
-                          >
-                            Terms of Use
-                          </Text>
-                        </div>
-                        <div className="flex flex-col items-center justify-start sm:ml-[0] ml-[23px] pt-[3px]">
-                          <a
-                            href="javascript:"
-                            className="text-base text-gray-300"
-                          >
-                            <Text size="txtManropeRegular16">Privacy Policy</Text>
-                          </a>
-                        </div>
-                        <div className="flex flex-col items-center justify-start sm:ml-[0] ml-[23px] pt-[3px]">
-                          <Text
-                            className="text-base text-gray-300"
-                            size="txtManropeRegular16"
-                          >
-                            Accessibility Statement
-                          </Text>
-                        </div>
-                      </div>
-                    </div>
-                    <Text
-                      className="text-base text-green-A700"
-                      size="txtManropeBold16GreenA700"
-                    >
-                      Made with Owner.com
-                    </Text>
                   </div>
                 </div>
               </div>
