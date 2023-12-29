@@ -1,11 +1,8 @@
 import React from 'react';
 import "../Home/home.css";
 import Navbar from '../NavBar/Navbar';
-import { restaurantData } from '../../mocks/common';
-import ProductSlider from '../ProductSlider/ProductSlider';
 import Footer from '../Footer/Footer';
-import { getAllProducts } from '../../network/products/products';
-import { useConfig } from '../../network/Common/common';
+import BG1 from "./homeBackground.png"
 import { toast, ToastContainer } from 'react-toastify';
 import { Button, Img, Input, Line, Text } from "../../fonts";
 const Home = () => {
