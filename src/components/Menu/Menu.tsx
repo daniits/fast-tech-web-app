@@ -1,12 +1,16 @@
 import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
-import "./menu.css";
+import "../Home/home.css";
 import Navbar from '../NavBar/Navbar';
 import { restaurantData } from '../../mocks/common';
 import ProductSlider from '../ProductSlider/ProductSlider';
 import Footer from '../Footer/Footer';
 import { getAllProducts } from '../../network/products/products';
+<<<<<<< HEAD
 import { useConfig } from '../..//network/Common/common';
+=======
+import { useConfig } from '../../network/Common/common';
+>>>>>>> b8b28a8b40414e525fa696b6584d295ab4609276
 import { toast, ToastContainer } from 'react-toastify';
 
 const Menu = () => {
@@ -118,6 +122,10 @@ const Menu = () => {
             <div className="h-line p-1 h-[30px] overflow-hidden">
               <div className="container">
                 <div className="row">
+<<<<<<< HEAD
+=======
+
+>>>>>>> b8b28a8b40414e525fa696b6584d295ab4609276
                   <h1 className='h-line-h1 px-2 sm:text-[13px]' onClick={() => scrollToProducts(-1)}>
                     Join {restaurantData.name} Rewards to get free items when you order here →
                   </h1>
