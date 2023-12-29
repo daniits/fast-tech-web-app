@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useSignUp } from '@/network/auth/auth';
-import { useCheckPhone, useVerifyPhone } from '@/network/verify/verify';
-import { useAuth } from '@/hooks/AuthContext';
+import { useSignUp } from '../../network/auth/auth';
+import { useCheckPhone, useVerifyPhone } from '../../network/verify/verify';
+import { useAuth } from '../..//hooks/AuthContext';
 import { useHistory } from 'react-router-dom';
-import { restaurantData } from '@/mocks/common';
+import { restaurantData } from '../../mocks/common';
 import InputMask from 'react-input-mask';
 import { toast } from 'react-toastify';
 

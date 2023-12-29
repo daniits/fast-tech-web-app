@@ -1,19 +1,19 @@
-import Navbar from '@/components/NavBar/Navbar'
+import Navbar from '../../components/NavBar/Navbar'
 import React, { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { getRelatedBeverages, useRecommendedSides, useRelatedProducts, useSingleProduct } from '@/network/products/products'
-import { useAddFavouriteProduct, useGetFavouriteProduct, useRemoveFavouriteProduct } from '@/network/Common/common'
-import { restaurantData } from '@/mocks/common';
+import { getRelatedBeverages, useRecommendedSides, useRelatedProducts, useSingleProduct } from '../../network/products/products'
+import { useAddFavouriteProduct, useGetFavouriteProduct, useRemoveFavouriteProduct } from '../../network/Common/common'
+import { restaurantData } from '../../mocks/common';
 import './products.css'
 import { toast, ToastContainer } from 'react-toastify';
-import { useConfig } from '@/network/Common/common';
+import { useConfig } from '../../network/Common/common';
 
 import { FaHeart } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import axios from 'axios';
-import Footer from '@/components/Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 export default function Product() {
   const { id } = useParams<any>()
   const history = useHistory()

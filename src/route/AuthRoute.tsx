@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect, Route, RouteProps } from 'react-router-dom'
-import { useAuth } from '@/hooks/AuthContext'
+import { useAuth } from '../hooks/AuthContext'
 
 type PrivateRouteProps = RouteProps
 

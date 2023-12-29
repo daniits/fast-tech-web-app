@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';
-import { restaurantData } from '@/mocks/common';
+import { restaurantData } from '../../mocks/common';
 import { CiCreditCard1 } from "react-icons/ci";
 import '../Cart/Cart'
 import '../Checkout/checkout.css'
-import { usePaymentCard, useGetPaymentCard, useDeletePaymentCard, useSetDefaultPaymentCard } from '@/network/Common/common'
+import { usePaymentCard, useGetPaymentCard, useDeletePaymentCard, useSetDefaultPaymentCard } from '../../network/Common/common'
 import { toast, ToastContainer } from 'react-toastify';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import InputMask from 'react-input-mask';

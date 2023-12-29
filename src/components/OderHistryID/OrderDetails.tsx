@@ -4,8 +4,8 @@ import Footer from '../Footer/Footer'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { useConfig } from '@/network/Common/common';
-import { restaurantData } from '@/mocks/common';
+import { useConfig } from '../../network/Common/common';
+import { restaurantData } from '../../mocks/common';
 
 const OrderDetails = () => {
   const [order, setOrders] = useState<any>()

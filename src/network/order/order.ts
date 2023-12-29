@@ -1,5 +1,5 @@
 import { useMutation, UseMutationOptions } from 'react-query'
-import { fetchData, mutateData } from '@/network/api'
+import { fetchData, mutateData } from '../../network/api'
 
 const endpoints = {
   placeOrder: '/customer/order/place'

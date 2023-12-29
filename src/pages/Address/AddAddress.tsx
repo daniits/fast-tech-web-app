@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { IoMdAddCircleOutline } from 'react-icons/io';
-import { useAddAddress, useGetAddress } from '@/network/Common/common';
-import { restaurantData } from '@/mocks/common';
+import { useAddAddress, useGetAddress } from '../../network/Common/common';
+import { restaurantData } from '../../mocks/common';
 import { IoHomeOutline } from 'react-icons/io5';
 import { CiCreditCard1 } from 'react-icons/ci';
 import { toast, ToastContainer } from 'react-toastify';
