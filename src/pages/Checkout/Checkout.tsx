@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { Link, useHistory } from 'react-router-dom'
+import { Text } from "../../components/Text"
 import { IoMdAddCircleOutline } from 'react-icons/io'
 import { usePopularProducts } from '../../network/products/products'
 import {
@@ -185,9 +186,9 @@ export default function Checkout() {
       const a =
         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
         Math.cos(lat1 * (Math.PI / 180)) *
-          Math.cos(lat2 * (Math.PI / 180)) *
-          Math.sin(dLon / 2) *
-          Math.sin(dLon / 2)
+        Math.cos(lat2 * (Math.PI / 180)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2)
       const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
       const distance = R * c // Distance in kilometers
 
@@ -369,44 +370,54 @@ export default function Checkout() {
                   </button>
                   s
                 </div>
-                <div className="flex overflow-x-auto  gap-2   ">
+                <div className="flex overflow-x-auto gap-2">
                   {coverageArray?.map((value: any, index: number) => {
                     const isInCoverage = value.inCoverage
 
                     return (
-                      <div className="min-w-[100px] flex-shrink-0">
+                      <div className="min-w-[150px] flex-shrink-0">
                         <div
-                          className="flex gap-2 mb-5 "
+                          style={{ width: "340px",height: "81px" }}
+                          className="flex gap-2 mb-5"
                           onClick={() => {
                             handleAddressClick(index)
                             calculateDistance(value)
                           }}
                         >
                           <div
-                            className={`flex items-center ${
-                              selectedAddressIndex === index
-                                ? 'address'
-                                : 'bg-black'
-                            } p-1 h-[50px] border-2  border-green-500 rounded-lg cursor-pointer ${
-                              value.address ? '' : ''
-                            }`}
+                          style={{ width: "340px", height: "81px" }}
+                            className={`flex items-center relative ${selectedAddressIndex === index
+                              ? 'address'
+                              : 'bg-black'
+                              } p-1 h-[50px] border-2  border-green-500 rounded-lg cursor-pointer ${value.address ? '' : ''
+                              }`}
                           >
                             <IoHomeOutline
-                              className={`${
-                                selectedAddressIndex === index
-                                  ? 'text-white'
-                                  : 'text-green-500'
-                              } text-xl cursor-pointer mr-2`}
+                              className={`${selectedAddressIndex === index
+                                ? 'text-white'
+                                : 'text-green-500'
+                                } text-xl cursor-pointer mr-2`}
                             />
                             <span className="text-md text-white">
                               {truncateText(value.address, 50)}
                             </span>
+                            {!isInCoverage && (
+                              <div className="absolute border-solid flex flex-col h-full inset-[0] items-center justify-center m-auto p-1.5 rounded-[9px] w-full" style={{
+                                borderRadius: "9px",
+                                border: "1px solid #06B906",
+                                opacity: "0.8",
+                                background: "#0A0A0A"
+                              }}>
+                                <Text
+                                  className="mb-[22px] mt-[26px] text-sm text-white-A700"
+                                  size="txtManropeBold14WhiteA700_1"
+                                  style={{ color: "white" }}
+                                >
+                                  This address is out of coverage for this branch
+                                </Text>
+                              </div>
+                            )}
                           </div>
-                          {!isInCoverage && (
-                            <span className=" text-md text-white">
-                              This address is out of coverage for this branch
-                            </span>
-                          )}
                         </div>
                       </div>
                     )
@@ -418,17 +429,15 @@ export default function Checkout() {
                   </span>
                   <div className="mt-3">
                     <button
-                      className={`${
-                        todaySlot ? 'pref-focus-btn' : 'pref-btn'
-                      } p-2`}
+                      className={`${todaySlot ? 'pref-focus-btn' : 'pref-btn'
+                        } p-2`}
                       onClick={() => setTodaySlot(true)}
                     >
                       Today
                     </button>
                     <button
-                      className={`${
-                        !todaySlot ? 'pref-focus-btn' : 'pref-btn'
-                      } p-2`}
+                      className={`${!todaySlot ? 'pref-focus-btn' : 'pref-btn'
+                        } p-2`}
                       onClick={() => setTodaySlot(false)}
                     >
                       Tomorrow
@@ -440,23 +449,23 @@ export default function Checkout() {
                   <div className="mt-5 flex overflow-y-auto gap-1">
                     {todaySlot
                       ? todayTimeSlots?.map((value, index) => (
-                          <button
-                            key={index}
-                            className="time-btn flex items-center justify-center p-3"
-                            type="submit"
-                          >
-                            {value}
-                          </button>
-                        ))
+                        <button
+                          key={index}
+                          className="time-btn flex items-center justify-center p-3"
+                          type="submit"
+                        >
+                          {value}
+                        </button>
+                      ))
                       : tomorrowTimeSlots?.map((value, index) => (
-                          <button
-                            key={index}
-                            className="time-btn flex items-center justify-center p-3"
-                            type="submit"
-                          >
-                            {value}
-                          </button>
-                        ))}
+                        <button
+                          key={index}
+                          className="time-btn flex items-center justify-center p-3"
+                          type="submit"
+                        >
+                          {value}
+                        </button>
+                      ))}
                   </div>
                 </div>
                 <div className="py-4 row overflow-x-auto">
@@ -471,11 +480,10 @@ export default function Checkout() {
                       >
                         <div className="ml-10">
                           <span
-                            className={`${
-                              selectedBranchIndex === index
-                                ? 'text-green-500'
-                                : 'text-white'
-                            } text-md`}
+                            className={`${selectedBranchIndex === index
+                              ? 'text-green-500'
+                              : 'text-white'
+                              } text-md`}
                           >
                             {value.name}
                             <br />
@@ -510,19 +518,17 @@ export default function Checkout() {
                         onClick={() => handleCardClick(index)}
                       >
                         <CiCreditCard1
-                          className={`${
-                            selectedCardIndex === index
-                              ? 'text-green-600'
-                              : 'bg-black'
-                          }  text-2xl cursor-pointer`}
+                          className={`${selectedCardIndex === index
+                            ? 'text-green-600'
+                            : 'bg-black'
+                            }  text-2xl cursor-pointer`}
                         />
                         <div className="ml-10">
                           <span
-                            className={`${
-                              selectedCardIndex === index
-                                ? 'text-green-600'
-                                : 'bg-black'
-                            }  text-md text-gray-600`}
+                            className={`${selectedCardIndex === index
+                              ? 'text-green-600'
+                              : 'bg-black'
+                              }  text-md text-gray-600`}
                           >
                             {value.customer_account}
                             <br />
